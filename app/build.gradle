@@ -33,9 +33,9 @@ java {
 }
 
 application {
-    // Define the main class for the application.
-    mainClass = 'finalproject.App'
+    mainClass = 'com.finalproject.app.Main'
 }
+
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
