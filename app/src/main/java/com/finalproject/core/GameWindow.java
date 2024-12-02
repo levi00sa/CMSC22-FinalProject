@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class GameWindow extends JFrame {
-    public GameWindow(String title,  int width, int height, boolean isUndecorated, int extendedState, boolean isResizable, ImageIcon logo) {
+    public GameWindow(String title,  int width, int height, boolean isUndecorated, int extendedState, boolean isResizable, boolean isAlwaysOnTop, ImageIcon logo) {
         this.setTitle(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(isResizable);
@@ -13,10 +13,12 @@ public class GameWindow extends JFrame {
         this.setUndecorated(isUndecorated);
         this.setExtendedState(extendedState);
         this.getContentPane().setBackground(Color.GREEN);
+        this.setAlwaysOnTop(isAlwaysOnTop);
         this.setVisible(true);
 
-        ImageIcon image = logo;
-        this.setIconImage(image.getImage());
+
+        // ImageIcon image = logo;
+        // this.setIconImage(image.getImage());
         
     }
 } 
