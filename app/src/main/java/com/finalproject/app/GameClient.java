@@ -14,7 +14,7 @@ public class GameClient {
         this.frame = frame;
 
         // Initialize the first scene (e.g., MenuScene)
-        setScene(new MainMenuScene(frame));
+        setScene(new MainMenuScene(this));
         frame.setVisible(true);
     }
 

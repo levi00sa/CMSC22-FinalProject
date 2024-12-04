@@ -5,10 +5,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import com.finalproject.app.GameClient;
 import com.finalproject.core.GamePanel;
 
 public class MainMenuScene implements Scene{
-    private JFrame window;
+    private GameClient client;
     private JPanel menuPanel;
     private JPanel westPanel;
     private JPanel buttonsPanel;
@@ -17,8 +19,8 @@ public class MainMenuScene implements Scene{
     private JButton continueButton;
     private JButton exitButton;
 
-    public MainMenuScene(JFrame window){
-        this.window = window;
+    public MainMenuScene(GameClient client) {
+        this.client = client;
         menuPanel = new GamePanel(new BorderLayout(), true);
         westPanel = new GamePanel(new BorderLayout(), true);
         buttonsPanel = new GamePanel();
@@ -34,7 +36,7 @@ public class MainMenuScene implements Scene{
         continueButton.addActionListener(e -> continueGame());
 
         exitButton = new JButton("Exit");
-        // exitButton.setActionCommand("Exit");
+        exitButton.setActionCommand("Exit");
         exitButton.addActionListener(e -> exitGame());
 
         buttonsPanel.add(startButton);
@@ -49,18 +51,17 @@ public class MainMenuScene implements Scene{
         buttonsPanel.setVisible(true);
         westPanel.setVisible(true);
         menuPanel.setVisible(true);
-        window.add(menuPanel);
     } 
 
     private void startGame() {
-
+        client.setScene(new NightScene(1));
 
     }
     
     private void continueGame(){}
 
     private void exitGame() {
-        window.dispose();
+        System.exit(0);
     }
 
     @Override

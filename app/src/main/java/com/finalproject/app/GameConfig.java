@@ -6,7 +6,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 import com.finalproject.core.GameWindow;
-import com.finalproject.scenes.MainMenuScene;
+
 
 public class GameConfig {
     public static void main(String[] args) {
