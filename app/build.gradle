@@ -33,7 +33,7 @@ java {
 }
 
 application {
-    mainClass = 'com.finalproject.app.Main'
+    mainClass = 'com.finalproject.app.GameConfig'
 }
 
 
