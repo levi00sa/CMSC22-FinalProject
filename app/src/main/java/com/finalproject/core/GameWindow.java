@@ -12,9 +12,9 @@ public class GameWindow extends JFrame {
         this.setSize(width, height);
         this.setUndecorated(isUndecorated);
         this.setExtendedState(extendedState);
-        this.getContentPane().setBackground(Color.GREEN);
+        this.getContentPane().setBackground(Color.BLACK);
         this.setAlwaysOnTop(isAlwaysOnTop);
-        this.setVisible(true);
+        // this.setVisible(true);
 
 
         // ImageIcon image = logo;
